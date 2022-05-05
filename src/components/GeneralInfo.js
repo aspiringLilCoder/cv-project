@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+const GeneralInfo = (props) => {
+    const { data, onInputChange } = props;
 
-class GeneralInfo extends Component {
-  constructor(props) {
-      super(props)
-  }
-
-  render() {
-    const { data, onInputChange } = this.props;
 
     return (
       <div id="GeneralInfo" className='form'>
@@ -22,8 +17,7 @@ class GeneralInfo extends Component {
       <label htmlFor='number'>Phone Number:</label>
       <input id='number' name='number' onChange={onInputChange}/>
   </div>
-    )
+    );
   };
-}
-
-export default GeneralInfo;
+  
+  export default GeneralInfo;

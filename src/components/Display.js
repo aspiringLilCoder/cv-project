@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class Display extends Component {
-    constructor(props) {
-        super(props)
-      }
-
-  render() {
-    const {profilePic, name, address, email, number, school, titleStudy, graduation, company, position, tasks, from, to} = this.props.data;
+const Display = (props) => {
+    const {profilePic, name, address, email, number, school, titleStudy, graduation, company, position, tasks, from, to} = props.data;
 
     return (
         <div id="display">
@@ -36,8 +30,7 @@ class Display extends Component {
             <p>Worked from {from} to {to}</p>
         </div>
     </div>
-    )
+    );
   };
-}
-
-export default Display;
+  
+  export default Display;

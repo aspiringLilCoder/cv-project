@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+const Work = (props) => {
+    const { data, onInputChange } = props;
 
-class Work extends Component {
-  constructor(props) {
-      super(props)
-  }
-
-  render() {
-    const { data, onInputChange } = this.props;
 
     return (
       <div id="Work" className='form'>
@@ -23,8 +18,7 @@ class Work extends Component {
       <label htmlFor='to'>To:</label>
       <input id='to' name='to' type='date'  onChange={onInputChange}/>
   </div>
-    )
+    );
   };
-}
-
-export default Work;
+  
+  export default Work;
